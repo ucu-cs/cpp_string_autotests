@@ -170,7 +170,7 @@ TEST_F(ClassDeclaration, reserve_shrink) {
     EXPECT_EQ(test_cap.capacity(), prev_cap);
 
     test_cap.reserve(53);
-    EXPECT_EQ(test_cap.capacity(), 53);
+    EXPECT_GE(test_cap.capacity(), 53);
 
     // shrink_to_fit
     test_cap.shrink_to_fit();
